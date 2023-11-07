@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://mlwiki.org/index.php/Voting_Theory -->
+<html lang="en" dir="ltr" class="client-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Voting Theory - ML Wiki_files/analytics.js.download"></script>
+
+<title>Voting Theory - ML Wiki</title>
+<meta name="generator" content="MediaWiki 1.25.3">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#54487a">
+<link rel="shortcut icon" href="http://mlwiki.org/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://mlwiki.org/opensearch_desc.php" title="ML Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://mlwiki.org/api.php?action=rsd">
+<link rel="alternate" hreflang="x-default" href="http://mlwiki.org/index.php/Voting_Theory">
+<link rel="alternate" type="application/atom+xml" title="ML Wiki Atom feed" href="http://mlwiki.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="./Voting Theory - ML Wiki_files/load.php">
+<style>
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}  .mw-content-ltr .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr .mw-collapsible-toggle{float:right} .mw-content-rtl .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl .mw-collapsible-toggle{float:left}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle,.mw-content-ltr li .mw-collapsible-toggle,.mw-content-rtl li .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr li .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: stolzen_mlwiki49-wiki:resourceloader:filter:minify-css:7:e1ffd603cbaaa5f1a36e0d13fe843535 */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
+/* cache key: stolzen_mlwiki49-wiki:resourceloader:filter:minify-css:7:f8d0c6895ce3ae14434c16b8fca59432 */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(/resources/src/mediawiki.action/images/green-checkmark.png?2019-05-21T19:08:20Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: stolzen_mlwiki49-wiki:resourceloader:filter:minify-css:7:8a219b73299d8222b0264277c081e72b */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}
+/* cache key: stolzen_mlwiki49-wiki:resourceloader:filter:minify-css:7:ae3fa4570b5ac0c6cf7b3776c8ae4d6f */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: stolzen_mlwiki49-wiki:resourceloader:filter:minify-css:7:641c3f54d470f401e55a1ae82ab48f7e */</style>
+<script src="./Voting Theory - ML Wiki_files/load(1).php"></script><script src="./Voting Theory - ML Wiki_files/load(2).php"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Voting_Theory","wgTitle":"Voting Theory","wgCurRevisionId":257,"wgRevisionId":257,"wgArticleId":255,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Voting Theory"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Voting_Theory","wgRelevantArticleId":255,"wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: stolzen_mlwiki49-wiki:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script><script src="./Voting Theory - ML Wiki_files/load(3).php"></script>
+<link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.91c71242b4acaa0ee7f9db125ef21f90.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.c1a71f401a053197a6883b365e7ee98e.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.808d27ff9483aea25a1512b92af18720.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.1') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script src="./Voting Theory - ML Wiki_files/alfalfalfa.0823c767a3bc925f628afd9bed26c958.js.download" async="" charset="UTF-8"></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Voting_Theory skin-tyrian-mediawiki action-view"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+      <div class="ololo-wiki">
+          <header class="wiki-header noprint">
+      <div class="site-title">
+        <div class="container">
+          <div class="row">
+            <div class="site-title-buttons">
+              <div class="btn-group">
+                <div>
+                  <form class="navbar-search navbar-form navbar-right" action="http://mlwiki.org/index.php" id="searchform" role="search">
+                    <div class="input-group">
+                      <input class="form-control" type="search" name="search" placeholder="Search" title="Search ML Wiki [alt-shift-f]" accesskey="f" id="searchInput" autocomplete="off">
+                      <input type="hidden" name="title" value="Special:Search">
+                      <div class="input-group-btn">
+                        <input name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton btn btn-default" type="submit">
+                        <input name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton btn btn-default" type="submit">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="wiki-title">
+              <h1><a href="http://mlwiki.org/index.php/Main_Page">ML Wiki</a></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-grey navbar-sticky" id="wiki-actions" role="navigation">
+        <div class="container">
+          <div class="row">
+            <ul class="nav navbar-nav">
+              <li><a href="http://mlwiki.org/index.php/Main_Page">Home</a></li>
+              <li class="dropdown">
+              </li><li class="dropdown">
+                <a href="http://mlwiki.org/index.php/Voting_Theory#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i> Page Info<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li id="t-whatlinkshere"><a href="http://mlwiki.org/index.php/Special:WhatLinksHere/Voting_Theory" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="http://mlwiki.org/index.php/Special:RecentChangesLinked/Voting_Theory" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="http://mlwiki.org/index.php/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="http://mlwiki.org/index.php?title=Voting_Theory&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="http://mlwiki.org/index.php?title=Voting_Theory&amp;oldid=257" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="http://mlwiki.org/index.php?title=Voting_Theory&amp;action=info" title="More information about this page">Page information</a></li>                </ul>
+              </li>
+            </ul>
+
+            <div>
+                    <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="http://mlwiki.org/index.php/Special:UserLogin" title="Special:UserLogin">Log in</a>        </li>
+      </ul>
+                  </div>
+          </div>
+        </div>
+      </nav>  
+    </header>
+        <div id="wiki-outer-body">
+      <div id="wiki-body" class="container">
+        
+        
+        
+        <div class="pagetitle page-header">
+          <h1>Voting Theory<small></small></h1>
+        </div>  
+
+        <div class="body">
+          <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="http://mlwiki.org/index.php/Voting_Theory#" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="http://mlwiki.org/index.php/Voting_Theory#Voting_Theory"><span class="tocnumber">1</span> <span class="toctext">Voting Theory</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="http://mlwiki.org/index.php/Voting_Theory#Notation_and_Relations"><span class="tocnumber">2</span> <span class="toctext">Notation and Relations</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="http://mlwiki.org/index.php/Voting_Theory#Voting_Mechanisms_and_Principles"><span class="tocnumber">3</span> <span class="toctext">Voting Mechanisms and Principles</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="http://mlwiki.org/index.php/Voting_Theory#Criteria"><span class="tocnumber">3.1</span> <span class="toctext">Criteria</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="http://mlwiki.org/index.php/Voting_Theory#Theorems"><span class="tocnumber">4</span> <span class="toctext">Theorems</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="http://mlwiki.org/index.php/Voting_Theory#Examples_and_Exercises"><span class="tocnumber">5</span> <span class="toctext">Examples and Exercises</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="http://mlwiki.org/index.php/Voting_Theory#Misc."><span class="tocnumber">6</span> <span class="toctext">Misc.</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="http://mlwiki.org/index.php/Voting_Theory#Links"><span class="tocnumber">7</span> <span class="toctext">Links</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="http://mlwiki.org/index.php/Voting_Theory#Sources"><span class="tocnumber">8</span> <span class="toctext">Sources</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Voting_Theory">Voting Theory</span></h2>
+<p>Voting Theory studies how to take individual rankings of voters and aggregate them to form the global ranking.
+</p><p>Examples:
+</p>
+<ul><li> Votes for a president of a company/country, etc. All voters communicate their results and based on that the president is chosen</li>
+<li> Search engines: there are many results, how to show them? </li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Notation_and_Relations">Notation and Relations</span></h2>
+<ul><li> let <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;{&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;}&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 8.8em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.072em; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(1.469em, 1007.02em, 2.778em, -999.997em); top: -2.354em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">A</span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main; padding-left: 0.264em;">=</span><span class="mo" id="MathJax-Span-5" style="font-family: MathJax_Main; padding-left: 0.264em;">{</span><span class="mi" id="MathJax-Span-6" style="font-family: MathJax_Math-italic;">a</span><span class="mo" id="MathJax-Span-7" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-8" style="font-family: MathJax_Math-italic; padding-left: 0.16em;">b</span><span class="mo" id="MathJax-Span-9" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-10" style="font-family: MathJax_Math-italic; padding-left: 0.16em;">c</span><span class="mo" id="MathJax-Span-11" style="font-family: MathJax_Main;">,</span><span class="mo" id="MathJax-Span-12" style="font-family: MathJax_Main; padding-left: 0.16em;">.</span><span class="mo" id="MathJax-Span-13" style="font-family: MathJax_Main; padding-left: 0.16em;">.</span><span class="mo" id="MathJax-Span-14" style="font-family: MathJax_Main; padding-left: 0.16em;">.</span><span class="mo" id="MathJax-Span-15" style="font-family: MathJax_Main; padding-left: 0.16em;">}</span></span><span style="display: inline-block; width: 0px; height: 2.359em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.386em; border-left: 0px solid; width: 0px; height: 1.367em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi><mo>=</mo><mo fence="false" stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mo>.</mo><mo>.</mo><mo>.</mo><mo fence="false" stretchy="false">}</mo></math></span></span><script type="math/tex" id="MathJax-Element-1">A = \{a, b, c, ...\}</script> be the set of candidates</li>
+<li> there are <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-16" style="width: 1.102em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.893em; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(1.521em, 1000.89em, 2.516em, -999.997em); top: -2.354em; left: 0em;"><span class="mrow" id="MathJax-Span-17"><span class="mi" id="MathJax-Span-18" style="font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.359em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 0.977em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></span></span><script type="math/tex" id="MathJax-Element-2">N</script> voters </li>
+<li> each voter can express his preference on the basis of a <i>total order</i>
+<ul><li> i.e. he has to rank all the candidates </li></ul></li></ul>
+<p>For this notation we define the following relations (<a href="http://mlwiki.org/index.php/Voting_Theory_Relations" title="Voting Theory Relations">Voting Theory Relations</a>)
+</p>
+<ul><li> Weak and Strong Preference</li>
+<li> Indifference</li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Voting_Mechanisms_and_Principles">Voting Mechanisms and Principles</span></h2>
+<p>A <i>voting mechanism</i> (or <i>voting procedure</i> or <i>voting method</i>) takes a collection of votes (individual preferences of the candidates from set <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-19" style="width: 0.945em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.736em; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(1.469em, 1000.74em, 2.516em, -999.997em); top: -2.354em; left: 0em;"><span class="mrow" id="MathJax-Span-20"><span class="mi" id="MathJax-Span-21" style="font-family: MathJax_Math-italic;">A</span></span><span style="display: inline-block; width: 0px; height: 2.359em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 1.042em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math></span></span><script type="math/tex" id="MathJax-Element-3">A</script>) and forms the global ranking. Usually it choses a single candidate from the set <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-22" style="width: 0.945em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.736em; height: 0px; font-size: 124%;"><span style="position: absolute; clip: rect(1.469em, 1000.74em, 2.516em, -999.997em); top: -2.354em; left: 0em;"><span class="mrow" id="MathJax-Span-23"><span class="mi" id="MathJax-Span-24" style="font-family: MathJax_Math-italic;">A</span></span><span style="display: inline-block; width: 0px; height: 2.359em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 1.042em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math></span></span><script type="math/tex" id="MathJax-Element-4">A</script>.
+</p><p><img src="./Voting Theory - ML Wiki_files/voting-mechanism.png" alt="voting-mechanism.png">
+</p><p>There are several voting procedures:
+</p>
+<ul><li> <a href="http://mlwiki.org/index.php/Plurality_Voting" title="Plurality Voting">Plurality Voting</a></li>
+<li> <a href="http://mlwiki.org/index.php/Two-Round_Voting" title="Two-Round Voting">Two-Round Voting</a></li>
+<li> <a href="http://mlwiki.org/index.php/Borda%27s_Rule" title="Borda&#39;s Rule">Borda's Rule</a></li>
+<li> <a href="http://mlwiki.org/index.php/Condorcet%27s_Rule" title="Condorcet&#39;s Rule">Condorcet's Rule</a></li></ul>
+<p><br>
+</p>
+<h3><span class="mw-headline" id="Criteria">Criteria</span></h3>
+<p>How to characterize "good" voting methods?
+</p><p>There are several criteria 
+</p>
+<ul><li> <a href="http://mlwiki.org/index.php/Monotonicity" title="Monotonicity">Monotonicity</a></li>
+<li> <a href="http://mlwiki.org/index.php/Independence_to_Third_Alternatives" title="Independence to Third Alternatives">Independence to Third Alternatives</a></li>
+<li> <a href="http://mlwiki.org/index.php/Condorcet%27s_Rule#Fairness" title="Condorcet&#39;s Rule">Condorcet Fairness Criterion</a></li>
+<li> Solution Existence </li>
+<li> <a href="http://mlwiki.org/index.php/Separability" title="Separability">Separability</a></li></ul>
+<p><br>
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th> </th>
+<th> <a href="http://mlwiki.org/index.php/Plurality_Voting" title="Plurality Voting">PV</a> </th>
+<th> <a href="http://mlwiki.org/index.php/Two-Round_Voting" title="Two-Round Voting">2PV</a> </th>
+<th> <a href="http://mlwiki.org/index.php/Borda%27s_Rule" title="Borda&#39;s Rule">Borda</a> </th>
+<th> <a href="http://mlwiki.org/index.php/Condorcet%27s_Rule" title="Condorcet&#39;s Rule">Cond.</a>
+</th></tr>
+<tr>
+<th> <a href="http://mlwiki.org/index.php/Monotonicity" title="Monotonicity">Monotonicity</a>
+</th>
+<td> <a href="http://mlwiki.org/index.php/Plurality_Voting#Monotonicity" title="Plurality Voting">✔</a>
+</td>
+<td> <a href="http://mlwiki.org/index.php/Two-Round_Voting#Monotonicity" title="Two-Round Voting">✘</a>
+</td>
+<td> <a href="http://mlwiki.org/index.php/Borda%27s_Rule#Monotonicity" title="Borda&#39;s Rule">✔</a>
+</td>
+<td> <a href="http://mlwiki.org/index.php/Condorcet%27s_Rule#Monotonicity" title="Condorcet&#39;s Rule">✘</a>
+</td></tr>
+<tr>
+<th> Solution Existence
+</th>
+<td> ✔ </td>
+<td> ✔ </td>
+<td> ✔ </td>
+<td> <a href="http://mlwiki.org/index.php/Condorcet%27s_Rule#Condorcet_Paradox" title="Condorcet&#39;s Rule">✘</a>
+</td></tr>
+<tr>
+<th> <a href="http://mlwiki.org/index.php/Independence_to_Third_Alternatives" title="Independence to Third Alternatives">Manipulation</a>
+</th>
+<td> <a href="http://mlwiki.org/index.php/Plurality_Voting#Independence_to_Third_Alternatives" title="Plurality Voting">✘</a>
+</td>
+<td> <a href="http://mlwiki.org/index.php/Two-Round_Voting#Independence_to_Third_Alternatives" title="Two-Round Voting">✘</a>
+</td>
+<td> <a href="http://mlwiki.org/index.php/Borda%27s_Rule#Independence_to_Third_Alternatives" title="Borda&#39;s Rule">✘</a>
+</td>
+<td> <a href="http://mlwiki.org/index.php/Condorcet%27s_Rule#Independence_to_Third_Alternatives" title="Condorcet&#39;s Rule">✘</a>
+</td></tr>
+<tr>
+<th> <a href="http://mlwiki.org/index.php/Separability" title="Separability">Separability</a>
+</th>
+<td> <a href="http://mlwiki.org/index.php/Plurality_Voting#Separability" title="Plurality Voting">✔</a>
+</td>
+<td> <a href="http://mlwiki.org/index.php/Two-Round_Voting#Separability" title="Two-Round Voting">✘</a>
+</td>
+<td> <a href="http://mlwiki.org/index.php/Borda%27s_Rule#Separability" title="Borda&#39;s Rule">✔</a>
+</td>
+<td> <a href="http://mlwiki.org/index.php/Condorcet%27s_Rule#Separability" title="Condorcet&#39;s Rule">✔</a>
+</td></tr>
+<tr>
+<th> <a href="http://mlwiki.org/index.php/Condorcet%27s_Rule#Fairness" title="Condorcet&#39;s Rule">Condorcet Fairness</a>
+</th>
+<td> ✘
+</td>
+<td> ✘
+</td>
+<td> <a href="http://mlwiki.org/index.php/Borda%27s_Rule#Condorcet_Fairness" title="Borda&#39;s Rule">✘</a>
+</td>
+<td> ✔
+</td></tr></tbody></table>
+<p><br>
+Other principles:
+</p>
+<ul><li> <a href="http://mlwiki.org/index.php/Unanimity" title="Unanimity">Unanimity</a></li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Theorems">Theorems</span></h2>
+<ul><li> <a href="http://mlwiki.org/index.php/May%27s_Theorem" title="May&#39;s Theorem">May's Theorem</a></li>
+<li> <a href="http://mlwiki.org/index.php/Arrow%27s_Impossibility_Theorem" title="Arrow&#39;s Impossibility Theorem">Arrow's Impossibility Theorem</a></li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Examples_and_Exercises">Examples and Exercises</span></h2>
+<ul><li> <a href="http://mlwiki.org/index.php/Voting_Theory_Exercises" title="Voting Theory Exercises">Voting Theory Exercises</a></li>
+<li> <a href="http://mlwiki.org/index.php/Voting_Theory_Examples" title="Voting Theory Examples">Voting Theory Examples</a></li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Misc.">Misc.</span></h2>
+<ul><li> <a href="http://mlwiki.org/index.php/Banzhaf_Power_Index" title="Banzhaf Power Index">Banzhaf Power Index</a> - shows how strong a party is</li>
+<li> <a href="http://mlwiki.org/index.php/Parliamentary_Allocation" title="Parliamentary Allocation">Parliamentary Allocation</a> - how to allocate seats between parties in a parliament</li></ul>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Links">Links</span></h2>
+<ul><li> Mathematics of Voting - slides <a rel="nofollow" class="external autonumber" href="http://www.ms.uky.edu/~lee/ma111fa09/slides01.pdf">[1]</a> </li>
+<li> Criteria <a rel="nofollow" class="external autonumber" href="http://www.ctl.ua.edu/math103/voting/whatdowe.htm">[2]</a></li>
+<li> EC228 Voting Theory Lecture Notes <a rel="nofollow" class="external autonumber" href="http://www2.warwick.ac.uk/fac/soc/economics/current/modules/ec228/details/lecturenotes/lecturenotesbook.pdf">[3]</a></li>
+<li> Social Choice Theory and Multicriteria Decision Aiding <a rel="nofollow" class="external autonumber" href="http://www-desir.lip6.fr/publications/pub_1389_1_BouyssouMarchantPerny_soc_choice.pdf">[4]</a></li>
+<li> Book: Voting, Arbitration, and Fair Division <a rel="nofollow" class="external autonumber" href="http://xaravve.trentu.ca/pivato/Teaching/voting.pdf">[5]</a></li>
+<li> Methods vs Voting Criteria <a rel="nofollow" class="external autonumber" href="http://en.wikipedia.org/wiki/Voting_system_criterion">[6]</a></li></ul>
+<h2><span class="mw-headline" id="Sources">Sources</span></h2>
+<ul><li> <a href="http://mlwiki.org/index.php/Decision_Engineering_(ULB)" title="Decision Engineering (ULB)">Decision Engineering (ULB)</a></li>
+<li> The mathematics of voting and elections: Paradox, deception, and chaos <a rel="nofollow" class="external autonumber" href="http://xaravve.trentu.ca/pivato/Teaching/votingslides.pdf">[7]</a></li></ul>
+
+<!-- 
+NewPP limit report
+CPU time usage: 0.052 seconds
+Real time usage: 0.062 seconds
+Preprocessor visited node count: 96/1000000
+Preprocessor generated node count: 204/1000000
+Post‐expand include size: 60/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   11.085      1 - -total
+ 28.98%    3.213      9 - Template:Yes
+ 28.12%    3.117     11 - Template:No
+-->
+
+<!-- Saved in parser cache with key stolzen_mlwiki49-wiki:pcache:idhash:255-0!*!0!!en!*!* and timestamp 20191205064454 and revision id 257
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="http://mlwiki.org/index.php?title=Voting_Theory&amp;oldid=257">http://mlwiki.org/index.php?title=Voting_Theory&amp;oldid=257</a>"</div>
+        </div>
+
+                  <div class="category-links">
+            <!-- catlinks -->
+            <div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://mlwiki.org/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="http://mlwiki.org/index.php/Category:Voting_Theory" title="Category:Voting Theory">Voting Theory</a></li></ul></div></div>            <!-- /catlinks -->
+          </div>
+        
+                  <div class="data-after-content noprint">
+          <!-- dataAfterContent -->
+          <div id="mw-data-after-content">
+	Share your opinion
+			<script type="text/javascript">
+			var disqus_developer = 0;
+			var disqus_url = "http://mlwiki.org/index.php/Voting_Theory";
+			var disqus_title = "Voting Theory";
+			</script>
+			<br>
+			<div id="disqus_thread"><iframe id="dsq-app4053" name="dsq-app4053" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Voting Theory - ML Wiki_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 651px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+			<script type="text/javascript" src="./Voting Theory - ML Wiki_files/embed.js.download"></script>
+			<noscript><a href="http://disqus.com/forums/mlwiki/?url=ref">View the discussion thread.</a></noscript>
+</div>
+          <!-- /dataAfterContent -->
+          </div>
+        
+              </div>
+    </div>
+        <hr> 
+
+    <div id="footer">
+      <footer>
+        <div class="container">
+                        <div class="row">
+              <span id="lastmod"> This page was last modified on 18 January 2014, at 13:47.</span>
+              </div>
+              
+        <div class="row">
+          <div>
+            <strong>2012 – 2019 by 
+            <a href="http://alexeygrigorev.com/">Alexey Grigorev</a></strong><br>
+            Powered by <a href="https://www.mediawiki.org/">MediaWiki</a>. 
+            <a href="https://github.com/alexeygrigorev/TyrianMediawiki-Skin">TyrianMediawiki Skin</a>, 
+            with <a href="https://github.com/gentoo/tyrian">Tyrian</a> design by <a href="https://www.gentoo.org/">Gentoo</a>.<br>
+            <small>
+                              <span id="privacy"><a href="http://mlwiki.org/index.php/ML_Wiki:Privacy_policy" title="ML Wiki:Privacy policy">Privacy policy</a></span>
+                                    <span id="about"><a href="http://mlwiki.org/index.php/ML_Wiki:About" title="ML Wiki:About">About ML Wiki</a></span>
+                                    <span id="disclaimer"><a href="http://mlwiki.org/index.php/ML_Wiki:General_disclaimer" title="ML Wiki:General disclaimer">Disclaimers</a></span>
+                              </small>
+          </div>
+        </div></div>
+      </footer>
+    </div>
+    <script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"skins.tyrian-mediawiki":"loading","site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://mlwiki.org/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=skins.tyrian-mediawiki\u0026amp;only=scripts\u0026amp;skin=tyrian-mediawiki\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script><script src="./Voting Theory - ML Wiki_files/load(4).php"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<style>
+.MathJax_Display {
+    display: inline !important;
+}
+</style>
+
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['[math]','[/math]'], ['$','$'], ['\\(','\\)']]},
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script src="./Voting Theory - ML Wiki_files/MathJax.js.download" id=""></script>
+
+
+<script src="./Voting Theory - ML Wiki_files/highlight.pack.js.download"></script>
+<link rel="stylesheet" href="./Voting Theory - ML Wiki_files/github.css">
+<script type="text/javascript">$(document).ready(function() {
+                                 $('pre').each(function(i, block) {
+                                     hljs.highlightBlock(block);
+                                 });
+                             });</script>
+<script type="text/javascript">
+			//<![CDATA[
+			(function()
+			{
+			var links = document.getElementsByTagName('a');
+			var query = '?';
+			for(var i = 0; i < links.length; i++)
+			if(links[i].href.indexOf('#disqus_thread') >= 0)
+			query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+			document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/mlwiki/get_num_replies.js' + query + '"></' + 'script>');
+			})();
+			//]]>
+			</script><script charset="utf-8" type="text/javascript" src="./Voting Theory - ML Wiki_files/get_num_replies.js.download"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68374732-2', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":302});
+}</script>      </div><iframe style="display: none;" src="./Voting Theory - ML Wiki_files/saved_resource(1).html"></iframe>
+    <div class="suggestions" style="display: none; font-size: 14px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div></div></body></html>
